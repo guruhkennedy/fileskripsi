@@ -135,7 +135,7 @@ class ReservasiController extends Controller
         $pesan = str_replace('$_KODE_$', $transaction->kode, $pesan);
         $pesan = str_replace('$_LINK_$', url('order?kode=' . $transaction->kode), $pesan);
         $pesan = str_replace('$_NAMA_$', $transaction->nama, $pesan);
-        WaController::sendWhatsapp('082112529951', $transaction->kode);
+        WaController::sendWhatsapp('082112529951', $pesan);
         //redirect ke url
         return redirect('order?kode=' . $transaction->kode);
     }

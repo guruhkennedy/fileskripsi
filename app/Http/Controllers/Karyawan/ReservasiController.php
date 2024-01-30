@@ -140,7 +140,7 @@ class ReservasiController extends Controller
         $data_post = [
             'sender' => $sender,
             'api_key' => $api_key,
-            'number'   =>  '089602783380',
+            'number'   =>  $no_hp,
             'message'   => $pesan
         ];
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data_post));
